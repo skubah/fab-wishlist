@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FabFav Wishlist</title>
+    <link rel="stylesheet" href="content-style.css">
+</head>
+<body>
+    <h1 id="wishlist-name">Wishlist</h1> <a href="index.html" id="common-button">Back to Wishlists</a>
+
+    <div>
+		<img src="icons/loading.gif" style="visibility:hidden; width:50px;" id="gifloading">
+		<button id="update-prices">Check Prices</button>
+		<button id="edit-wishlist-name">Edit Name</button>
+        <button id="export-wishlist">Export Wishlist</button>
+        <label for="import-wishlist" class="import-wishlist">Import Wishlist </label><input type="file" id="import-wishlist" name="import-wishlist" accept=".json" style="display: none;"/> 
+        &nbsp;<button id="clear-wishlist">Clear Wishlist</button>
+    </div>
+
+    <div id="wishlist-container"></div>
+
+    <script src="wishlist.js"></script>
+</body>
+</html>

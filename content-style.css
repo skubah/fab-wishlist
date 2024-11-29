@@ -1,0 +1,304 @@
+.fabkit-Button--success {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.fabkit-Button--success:hover {
+    background-color: #218838;
+}
+
+/* General Body and Layout */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Header Style */
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Wishlist Container */
+#wishlist-container {
+    display: flex;
+    flex-wrap: wrap;  /* This ensures that items wrap to the next row when needed */
+    justify-content: space-evenly;  /* Distribute items evenly with some space between them */
+    gap: 20px;  /* Adds space between items */
+    max-width: 1200px;  /* Limit the max width */
+    margin-top: 20px;
+}
+
+/* Individual Item */
+.wishlist-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 250px;  /* Width of each item */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+/* Hover Effects for the Items */
+.wishlist-item:hover {
+    transform: translateY(-10px);  /* Lift the item when hovered */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Item Image Style */
+.wishlist-item-image {
+    width: 100%;
+    height: auto;
+    max-height: 200px;  /* Optional: Limit the image height */
+    border-radius: 5px;
+}
+
+/* Item Title */
+.wishlist-item h2 {
+    font-size: 18px;
+    color: #333;
+    margin: 10px 0;
+}
+
+/* License List Style */
+.wishlist-item ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* License Item Style */
+.wishlist-item li {
+    margin-bottom: 5px;
+    color: #666;
+}
+
+/* View Link Style */
+.wishlist-item a {
+    text-decoration: none;
+    color: #0073e6;
+    font-weight: bold;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+/* Wishlist Buttons */
+#clear-wishlist {
+    background-color: #ff3b30;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+#delete-wishlist {
+    background-color: #ff3b30;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+#open-wishlist {
+    background-color: #3033ff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.import-wishlist {
+    background-color: #3033ff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+#export-wishlist {
+    background-color: #ff8f00;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+#edit-wishlist-name {
+    background-color: #8f04c2;;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+
+#common-button,#create-wishlist {
+    background-color: #202024;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+#update-prices {
+    background-color: #04a816;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+#update-asset {
+    background-color: #04a816;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+#clear-wishlist:hover {
+    background-color: #d32f2f;
+}
+
+/* Container for wishlistss */
+#wishlist-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+}
+
+/* Individual wishlists item card */
+.wishlists-item {
+    background-color: #f9f9f9;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.wishlists-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Image for the first asset */
+.wishlists-image img {
+    max-width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Details for the wishlists */
+.wishlists-details {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.wishlists-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.wishlists-quantity {
+    font-size: 1rem;
+    color: #555;
+}
+
+.open-wishlists {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.open-wishlists:hover {
+    background-color: #45a049;
+}
+
+.delete-wishlist {
+    background-color: #f44336;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.delete-wishlists:hover {
+    background-color: #e53935;
+}
+
+/* Responsiveness */
+@media screen and (max-width: 768px) {
+    .wishlists-item {
+        width: calc(50% - 16px); /* 2 items per row on smaller screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .wishlists-item {
+        width: 100%; /* 1 item per row on very small screens */
+    }
+}

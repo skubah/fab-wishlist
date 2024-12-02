@@ -58,6 +58,7 @@ async function displayWishlist(wishlistIndex) {
 
     attachUpdateHandlers(wishlistIndex, wishlist);
     attachDeleteHandlers(wishlistIndex);
+	calculateAndDisplayTotal(wishlist);
 }
 
 function attachUpdateHandlers(wishlistIndex, wishlist) {
@@ -337,3 +338,27 @@ document.getElementById("update-prices").addEventListener("click", updatePrices)
 document.getElementById('import-wishlist').addEventListener('click', importWishlist);
 document.getElementById('export-wishlist').addEventListener('click', exportWishlist);
 document.getElementById('clear-wishlist').addEventListener('click', clearWishlist);
+
+
+async function calculateAndDisplayTotal(wishlist) {
+    const totals = {};
+
+    // Initialize totals for each license type
+    wishlist.items.forEach((item) => {
+        item.licenses.forEach((license) => {
+            const priceKey = item.discountType ? 'discountedPrice' : 'price';
+            totals[license.name] = (totals[license.name] || 0) + license[priceKey];
+        });
+    });
+
+    // Format and display totals
+    const totalContainer = document.getElementById('total-prices');
+    totalContainer.innerHTML = '<h3>Total Prices by License:</h3>';
+    for (const [licenseName, totalPrice] of Object.entries(totals)) {
+        const formattedTotal = `$${totalPrice.toFixed(2)}`;
+        const totalElement = document.createElement('p');
+        totalElement.textContent = `${licenseName}: ${formattedTotal}`;
+        totalContainer.appendChild(totalElement);
+    }
+
+}
